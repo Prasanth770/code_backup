@@ -1,0 +1,33 @@
+package Emp;
+import java.sql.*;
+
+public class Employee {
+
+	public static void main(String[] args) {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emp","root","$Prasanth123");
+			Statement stmt = con.createStatement();
+			stmt.execute("insert into emp values(74001, 'Prasanth', 21, 39000, 'Developer', '2022-06-28', 'Chittoor', 9678985664, 1234567812345678, 'ASDF4563A'),\r\n"
+					+ "(74002, 'Rakesh', 22, 35000, 'Manager', '2022-05-28', 'Mittoor', 9999985764, 9855665263215678, 'ABCD1234B'),\r\n"
+					+ "(74003, 'Suresh', 23, 26000, 'Tester', '2022-05-28', 'Chittoor', 7702085764, 856321456321456, 'DEFG5678A'),\r\n"
+					+ "(74004, 'Ramesh', 24, 37000, 'Developer', '2022-07-28', 'Chittoor', 0857272764, 9520142365478963, 'ZXCB9874A');");
+			stmt.close();
+			System.out.println("Data saved Successfully....!");
+		}
+		catch(Exception e) {
+			System.out.println("Exception occured");
+		}
+		
+
+	}
+
+}
+
+
+/*
+ insert into emp values(74001, 'Prasanth', 21, 39000, 'Developer', '2022-06-28', 'Chittoor', 9678985664, 1234567812345678, 'ASDF4563A'),
+(74002, 'Rakesh', 22, 35000, 'Manager', '2022-05-28', 'Mittoor', 9999985764, 9855665263215678, 'ABCD1234B'),
+(74003, 'Suresh', 23, 26000, 'Tester', '2022-05-28', 'Chittoor', 7702085764, 856321456321456, 'DEFG5678A'),
+(74004, 'Ramesh', 24, 37000, 'Developer', '2022-07-28', 'Chittoor', 0857272764, 9520142365478963, 'ZXCB9874A'); */

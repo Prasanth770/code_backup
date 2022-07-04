@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class abc{
+Scanner uu = new Scanner(System.in);
+int average;
+	abc(){
+	System.out.print("To Find Average of Marks ");
+	System.out.println("enter the Marks of Each subject as mentioned ");
+	System.out.print("Telugu : ");
+	int t =uu.nextInt();
+	System.out.print("Hindi : ");
+	int h =uu.nextInt();	
+	System.out.print("English : ");
+	int e =uu.nextInt();
+	System.out.print("Maths : ");
+	int m =uu.nextInt();
+	System.out.print("Science : ");
+	int s =uu.nextInt();
+	System.out.print("Social : ");
+	int ss =uu.nextInt();
+	
+	average=(t+h+e+m+s+ss)/6;
+	System.out.print("Average Marks :  "+ average);	
+	}
+
+ }
+ class avg{
+ public static void main(String args[]) {
+ abc vv = new abc();
+ }
+ }

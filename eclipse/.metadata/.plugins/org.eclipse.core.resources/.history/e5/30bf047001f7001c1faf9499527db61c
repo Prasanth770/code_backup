@@ -1,0 +1,22 @@
+package Emp;
+import java.sql.*;
+
+public class Employee {
+
+	public static void main(String[] args) {
+		
+		try {
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emp","root","$Prasanth123");
+			Statement stmt = con.createStatement();
+			stmt.execute("insert into emp values(74001, 'Prasanth', 21, 30000, 'Developer', '2022-06-28', 'Chittoor', 7702085764, 1234567812345678, 'ASDF4563A')");
+			stmt.close();
+			System.out.println("Data saved Successfully....!");
+		}
+		catch(Exception e) {
+			System.out.println();
+		}
+		
+
+	}
+
+}

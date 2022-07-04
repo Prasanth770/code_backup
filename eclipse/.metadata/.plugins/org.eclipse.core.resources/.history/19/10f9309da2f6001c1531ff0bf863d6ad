@@ -1,0 +1,14 @@
+package prasanth;
+
+import java.util.*;
+
+public class CallDemo {
+
+	public static void main(String[] args) {
+		ArrayList al = new ArrayList();
+		al.add(100);
+
+		System.out.println(al);
+	}
+
+}
